@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.LoginFragment">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="40dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="104dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_login_heading_tv"
+        style="@style/welcomeTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is great"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/fragment_login_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/merriweather_sans"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/extra_large_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_heading_tv" />
+
+    <View
+        android:id="@+id/view_long"
+        android:layout_width="120dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_login_username_tl"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        app:boxStrokeColor="@color/purple_200"
+        app:hintTextColor="@color/black"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fragment_login_"
+        app:layout_constraintTop_toBottomOf="@+id/view_long">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_login_username_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:textSize="12sp"
+             />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_login_password_tl"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:hint="password"
+        android:layout_marginTop="24dp"
+        app:boxStrokeColor="@color/purple_200"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fragment_login_username_tl"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_username_tl">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_login_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:enabled="false"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="36dp"
+        android:text="login"
+        android:backgroundTint="@color/color_accent"
+        android:fontFamily="@font/merriweather_sans"
+        app:cornerRadius="5dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_login_password_tl"
+        app:layout_constraintStart_toStartOf="@+id/fragment_login_password_tl"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_password_tl" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/welcomeOnBoardingFragment"
+        android:name="com.accessbankplc.shoeinventoryapp.ui.WelcomeOnBoardingFragment"
+        android:label="fragment_welcome_on_boarding"
+        tools:layout="@layout/fragment_welcome_on_boarding" />
+    <fragment
+        android:id="@+id/instructionsOnBoardingFragment"
+        android:name="com.accessbankplc.shoeinventoryapp.ui.InstructionsOnBoardingFragment"
+        android:label="fragment_instructions_on_boarding"
+        tools:layout="@layout/fragment_instructions_on_boarding" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.accessbankplc.shoeinventoryapp.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.accessbankplc.shoeinventoryapp.ui.ShoeListingFragment"
+        android:label="fragment_shoe_listing"
+        tools:layout="@layout/fragment_shoe_listing" />
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.accessbankplc.shoeinventoryapp.ui.ShoeDetailFragment"
+        android:label="fragment_shoe_detail"
+        tools:layout="@layout/fragment_shoe_detail" />
+</navigation>
