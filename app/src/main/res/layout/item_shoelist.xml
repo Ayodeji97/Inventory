@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoeData"
+            type="com.accessbankplc.shoeinventoryapp.model.Shoe" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/medium_padding"
+        android:clipToPadding="false"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/fragment_shoe_listing_name_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/primary_color"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="17.5dp"
+                    android:layout_marginBottom="17.5dp"
+                    android:focusable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/fragment_shoe_listing_name_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/jogging"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/fragment_shoe_listing_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/large_margin"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@color/primary_color"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@{shoeData.shoeName}" />
+
+
+                <TextView
+                    android:id="@+id/fragment_shoe_listing_company_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{shoeData.brandName}"
+                    android:textColor="@color/primary_color"
+                    app:layout_constraintStart_toStartOf="@+id/fragment_shoe_listing_name_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_shoe_listing_name_tv" />
+
+
+                <TextView
+                    android:id="@+id/fragment_shoe_listing_shoe_size_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{Double.toString(shoeData.shoeSize)}"
+                    android:textColor="@color/primary_color"
+                    app:layout_constraintStart_toStartOf="@+id/fragment_shoe_listing_company_name_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_shoe_listing_company_name_tv" />
+
+                <TextView
+                    android:id="@+id/fragment_shoe_listing_description_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{shoeData.shoeDescription}"
+                    android:textColor="@color/primary_color"
+                    app:layout_constraintStart_toStartOf="@+id/fragment_shoe_listing_shoe_size_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_shoe_listing_shoe_size_tv"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
