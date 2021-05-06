@@ -1,4 +1,4 @@
-package com.accessbankplc.shoeinventoryapp.ui
+package com.accessbankplc.shoeinventoryapp.ui.onboarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

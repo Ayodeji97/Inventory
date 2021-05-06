@@ -8,20 +8,21 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.accessbankplc.shoeinventoryapp.R
 import com.accessbankplc.shoeinventoryapp.databinding.FragmentShoeDetailBinding
+import com.accessbankplc.shoeinventoryapp.databinding.FragmentShoeListingBinding
 
 
 class ShoeListingFragment : Fragment() {
 
-    private lateinit var binding : FragmentShoeDetailBinding
+    private lateinit var ui : FragmentShoeListingBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
        // return inflater.inflate(R.layout.fragment_shoe_listing, container, false)
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_listing, container, false)
 
-        return binding.root
+        ui = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_listing, container, false)
+        return ui.root
     }
 
 }

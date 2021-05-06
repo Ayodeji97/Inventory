@@ -56,13 +56,13 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fragment_login_username_tl"
+            android:id="@+id/fragment_login_email_tl"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
-            android:hint="username"
+            android:hint="email"
             app:boxStrokeColor="@color/primary_color"
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view_long">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fragment_login_username_et"
+                android:id="@+id/fragment_login_email_et"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text"
@@ -91,8 +91,8 @@
             app:boxStrokeColor="@color/primary_color"
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/fragment_login_username_tl"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_login_username_tl">
+            app:layout_constraintStart_toStartOf="@+id/fragment_login_email_tl"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_login_email_tl">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fragment_login_password_et"
@@ -109,23 +109,22 @@
             android:id="@+id/login_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:background="@color/color_accent"
-            android:backgroundTint="@color/color_accent"
-            android:enabled="false"
-            android:fontFamily="@font/merriweather_sans"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:text="login"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/black"
+            app:cornerRadius="70dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="Get Started"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="normal"
-            app:backgroundTint="@null"
-            app:cornerRadius="5dp"
-            app:layout_constraintEnd_toEndOf="@+id/fragment_login_password_tl"
-            app:layout_constraintStart_toStartOf="@+id/fragment_login_password_tl"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_login_password_tl" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
