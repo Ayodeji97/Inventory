@@ -2,4 +2,13 @@
     <string name="app_name">ShoeInventoryApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    String format -->
+    <string name="shoe_name">Shoe Name: %s</string>
+    <string name="brand_name">Brand Name: %s</string>
+    <string name="shoe_size">Shoe Size: %s</string>
+    <string name="description">Description: %s</string>
+    <string name="login_str">Login</string>
+    <string name="skip_str">Skip</string>
+    <string name="add_shoe_str">Add Shoe</string>
 </resources>

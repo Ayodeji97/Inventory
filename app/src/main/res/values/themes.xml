@@ -41,4 +41,11 @@
     </style>
 
 
+    <style name="cardStyle">
+        <item name="fontFamily">@font/merriweather_sans</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+    </style>
+
+
 </resources>

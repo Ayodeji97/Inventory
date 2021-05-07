@@ -9,6 +9,7 @@
            name="showListViewModel"
            type="com.accessbankplc.shoeinventoryapp.viewmodel.ShowListViewModel" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
@@ -20,8 +21,8 @@
             android:id="@+id/view"
             android:layout_width="40dp"
             android:layout_height="1dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="104dp"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/shoe_detail_margin_top"
             android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -44,7 +45,7 @@
             android:fontFamily="@font/merriweather_sans"
             android:text="Add Shoppie"
             android:textColor="@color/white"
-            android:textSize="@dimen/extra_large_text_size"
+            android:textSize="@dimen/large_text_size"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintTop_toBottomOf="@+id/fragment_login_heading_tv" />
@@ -64,9 +65,9 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:hint="username"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:hint="Shoe name"
             app:boxStrokeColor="@color/primary_color"
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -90,9 +91,9 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:hint="username"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:hint="Brand name"
             app:boxStrokeColor="@color/primary_color"
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -116,9 +117,9 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:hint="username"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:hint="Shoe size"
             app:boxStrokeColor="@color/primary_color"
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -130,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@={`` + showListViewModel.shoe.shoeSize}"
-                android:inputType="text"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -142,9 +143,9 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:hint="username"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:hint="Description"
             app:boxStrokeColor="@color/primary_color"
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -173,7 +174,7 @@
             android:backgroundTint="@color/black"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:text="Get Started"
+            android:text="@string/add_shoe_str"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -185,5 +186,4 @@
             app:layout_constraintTop_toBottomOf="@+id/fragment_add_shoe_description_tl" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>

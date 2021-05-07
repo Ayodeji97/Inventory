@@ -16,61 +16,61 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="Skip"
-        android:textColor="@color/color_accent"
-        android:textSize="@dimen/medium_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginEnd="20dp"
+            android:text="@string/skip_str"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/fragment_welcome_onBoarding_image_iv"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/jogging"
-        android:layout_marginTop="@dimen/large_margin"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_welcome_onBoarding_skip_tv" />
-
-
-    <TextView
-        android:id="@+id/fragment_welcome_onboarding_heading_tv"
-        style="@style/onBoardingHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="We do the Inventory"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_welcome_onBoarding_image_iv" />
+        <ImageView
+            android:id="@+id/fragment_welcome_onBoarding_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/large_margin"
+            android:src="@drawable/jogging"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_welcome_onBoarding_skip_tv" />
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        <TextView
+            android:id="@+id/fragment_welcome_onboarding_heading_tv"
+            style="@style/onBoardingHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We do the Inventory"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_welcome_onBoarding_image_iv" />
 
 
-    <TextView
-        android:id="@+id/fragment_welcome_onBoarding_description_tv"
-        style="@style/onBoardingDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/medium_margin"
-        android:text="Get started to see different shoe\ninvented for you and you add to the list."
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/fragment_welcome_onboarding_heading_tv"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_welcome_onboarding_heading_tv" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+
+        <TextView
+            android:id="@+id/fragment_welcome_onBoarding_description_tv"
+            style="@style/onBoardingDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:text="Get started to see different shoe\ninvented for you and you add to the list."
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/fragment_welcome_onboarding_heading_tv"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_welcome_onboarding_heading_tv" />
 
 
         <com.google.android.material.button.MaterialButton
@@ -81,7 +81,6 @@
             android:layout_marginEnd="35dp"
             android:layout_marginBottom="30dp"
             android:backgroundTint="@color/black"
-            app:cornerRadius="70dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
             android:text="Get Started"
@@ -89,6 +88,7 @@
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="normal"
+            app:cornerRadius="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

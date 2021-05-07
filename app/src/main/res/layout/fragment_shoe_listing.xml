@@ -14,6 +14,7 @@
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/large_margin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +27,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
-
+<!--                Each shoe card goes here -->
             </LinearLayout>
 
         </ScrollView>
@@ -62,7 +62,6 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
             android:layout_margin="@dimen/medium_margin"
             android:padding="@dimen/medium_padding"
             android:backgroundTint="@color/primary_color"
