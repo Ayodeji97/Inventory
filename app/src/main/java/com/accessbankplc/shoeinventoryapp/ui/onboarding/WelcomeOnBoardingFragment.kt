@@ -11,6 +11,12 @@ import com.accessbankplc.shoeinventoryapp.R
 import com.accessbankplc.shoeinventoryapp.databinding.ActivityMainBinding
 import com.accessbankplc.shoeinventoryapp.databinding.FragmentWelcomeOnBoardingBinding
 
+/**
+ * Instruction on boarding screen
+ *
+ * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ * */
+
 class WelcomeOnBoardingFragment : Fragment() {
 
 private lateinit var ui : FragmentWelcomeOnBoardingBinding
@@ -27,6 +33,11 @@ private lateinit var ui : FragmentWelcomeOnBoardingBinding
 
         return ui.root
     }
+
+
+    /**
+     * Navigate to login screen
+     * */
 
     private fun navigate () {
         ui.getStartedBtn.setOnClickListener {

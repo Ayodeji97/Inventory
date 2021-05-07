@@ -10,14 +10,17 @@ import androidx.navigation.fragment.findNavController
 import com.accessbankplc.shoeinventoryapp.R
 import com.accessbankplc.shoeinventoryapp.databinding.FragmentInstructionsOnBoardingBinding
 
+/**
+ * Instruction on boarding screen
+ *
+ * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ * */
 
 class InstructionsOnBoardingFragment : Fragment() {
 
     private lateinit var ui : FragmentInstructionsOnBoardingBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-       // return inflater.inflate(R.layout.fragment_instructions_on_boarding, container, false)
 
         ui = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions_on_boarding, container, false)
 
@@ -26,7 +29,9 @@ class InstructionsOnBoardingFragment : Fragment() {
     }
 
 
-
+    /**
+     * Navigate to login screen
+     * */
     private fun navigate () {
         ui.getInstructionBtn.setOnClickListener {
             findNavController().navigate(R.id.loginFragment)

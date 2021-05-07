@@ -13,6 +13,8 @@ import java.text.DecimalFormat
 
 /**
  * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ *
+ * View model class contain all business logic of the app
  * */
 
 class ShowListViewModel : ViewModel() {

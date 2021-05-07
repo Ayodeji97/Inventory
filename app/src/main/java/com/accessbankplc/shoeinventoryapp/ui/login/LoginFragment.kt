@@ -1,4 +1,4 @@
-package com.accessbankplc.shoeinventoryapp.ui
+package com.accessbankplc.shoeinventoryapp.ui.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,6 +15,7 @@ import com.accessbankplc.shoeinventoryapp.utils.validatePassword
 
 
 /**
+ * Login Screen
  * Created by Daniel Ayodeji : https://github.com/Ayodeji97
  * */
 class LoginFragment : Fragment() {
@@ -27,24 +28,14 @@ class LoginFragment : Fragment() {
 
         ui = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
-        //navigate()
         validateUserInput()
         return ui.root
     }
 
 
-    // Temporal
-    private fun navigate () {
-        ui.loginBtn.setOnClickListener {
-            Toast.makeText(requireContext(), "Clicked", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.shoeListingFragment)
-        }
-    }
-
-
-
-// TODO : Refactor validation
-
+    /**
+     * Email and Password validation function
+     * */
     private fun validateUserInput () {
         ui.loginBtn.setOnClickListener {
 
@@ -58,7 +49,7 @@ class LoginFragment : Fragment() {
                 ui.fragmentLoginPasswordEt.error = "Password Field Cannot be blank"
                 return@setOnClickListener
             }
-            navigate()
+            findNavController().navigate(R.id.shoeListingFragment)
         }
     }
 

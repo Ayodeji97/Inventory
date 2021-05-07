@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 
 /**
  * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ *
+ * Fragment extension function responsible for validating if fields are empty.
  * */
 
 fun Fragment.validateEmailAddress (email : String) : Boolean {

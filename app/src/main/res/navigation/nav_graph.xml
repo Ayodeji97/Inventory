@@ -17,12 +17,12 @@
         tools:layout="@layout/fragment_instructions_on_boarding" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.accessbankplc.shoeinventoryapp.ui.LoginFragment"
+        android:name="com.accessbankplc.shoeinventoryapp.ui.login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/shoeListingFragment"
-        android:name="com.accessbankplc.shoeinventoryapp.ui.ShoeListingFragment"
+        android:name="com.accessbankplc.shoeinventoryapp.ui.shoelist.ShoeListingFragment"
         android:label="Shoe List"
         tools:layout="@layout/fragment_shoe_listing" />
     <fragment
