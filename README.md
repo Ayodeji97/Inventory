@@ -24,7 +24,7 @@ This is aimed to demonstrate full understanding of the following aspect of andro
 **Shoe Detail Screen** : A constraint layout with text field for shoe name, shoe size, shoe description and brand name. An add button to 
 add a list of shoe and a cancel button to navigate back to shoe list fragment
 
-#Rubric Adhered
+## Rubric Adhered
 - The Detail screen needs to add the new item to the view model. The listing screen should be listening to that model and show the new item.
 - There should only be one activity: MainActivity. Each screen should be a fragment.
 - The project's code is error-free.
@@ -38,3 +38,6 @@ add a list of shoe and a cancel button to navigate back to shoe list fragment
     - Detail screens
 - All click listeners are connected via the DataBindingUtil class and uses the NavController to navigate to the next screen.
 - This menu will appear only on the Shoe Listing screen and will return the user to the login screen
+
+## Project Demo Link
+- [App Demo](https://drive.google.com/drive/my-drive)
