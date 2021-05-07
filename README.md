@@ -40,4 +40,4 @@ add a list of shoe and a cancel button to navigate back to shoe list fragment
 - This menu will appear only on the Shoe Listing screen and will return the user to the login screen
 
 ## Project Demo Link
-- [App Demo](https://drive.google.com/drive/my-drive)
+- [App Demo](https://drive.google.com/file/d/11_nW99oVsbCwINM-jwrT-mbqmYzF9uT7/view?usp=sharing)
