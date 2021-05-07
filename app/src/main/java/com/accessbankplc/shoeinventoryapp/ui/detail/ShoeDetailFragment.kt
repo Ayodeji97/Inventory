@@ -6,34 +6,60 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.accessbankplc.shoeinventoryapp.R
 import com.accessbankplc.shoeinventoryapp.databinding.FragmentShoeDetailBinding
-import com.accessbankplc.shoeinventoryapp.viewmodel.ShoeDetailViewModel
+import com.accessbankplc.shoeinventoryapp.viewmodel.ShowListViewModel
 
 
 class ShoeDetailFragment : Fragment() {
 
-    private val viewModel : ShoeDetailViewModel by viewModels()
+    private val showListViewModel : ShowListViewModel by activityViewModels()
 
-    private lateinit var binding : FragmentShoeDetailBinding
+    private lateinit var ui : FragmentShoeDetailBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-     //   return inflater.inflate(R.layout.fragment_shoe_detail, container, false)
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
+        ui = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
+
+        setUpView()
+
+        return ui.root
+    }
+
+
+    private fun setUpView () {
 
         // Set the viewmodel for databinding - this allows the bound layout access to all of the
         // data in the VieWModel
-        binding.detailViewModel = viewModel
+        ui.showListViewModel = showListViewModel
 
         // this makes it possible to use data binding to update my layout directly and its makes data binding lifecycle aware
-        binding.lifecycleOwner = this
+        ui.lifecycleOwner = this
 
-        return binding.root
+        ui.addShoeBtn.setOnClickListener {
+            showListViewModel.addShoe()
+            findNavController().navigate(R.id.shoeListingFragment)
+        }
+
+
+        showListViewModel.isShoeAdditionComplete.observe(viewLifecycleOwner, Observer {
+            if (it) {
+                findNavController().navigateUp()
+            }
+        })
+
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        showListViewModel.reset()
     }
 
 }
