@@ -177,6 +177,7 @@
             android:layout_marginEnd="35dp"
             android:layout_marginBottom="30dp"
             android:backgroundTint="@color/black"
+            android:layout_marginTop="@dimen/large_margin"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
             android:text="@string/add_shoe_str"
@@ -185,10 +186,32 @@
             android:textSize="16sp"
             android:textStyle="normal"
             app:cornerRadius="70dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragment_add_shoe_description_tl" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_shoe_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/black"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/cancel_str"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:cornerRadius="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_shoe_btn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

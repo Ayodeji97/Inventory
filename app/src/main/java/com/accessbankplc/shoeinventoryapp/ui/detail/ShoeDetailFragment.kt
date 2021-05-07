@@ -50,6 +50,10 @@ class ShoeDetailFragment : Fragment() {
             findNavController().navigate(R.id.shoeListingFragment)
         }
 
+        ui.cancelShoeBtn.setOnClickListener {
+            findNavController().navigate(R.id.shoeListingFragment)
+        }
+
 
         showListViewModel.isShoeAdditionComplete.observe(viewLifecycleOwner, Observer {
             if (it) {
