@@ -15,6 +15,9 @@ import com.accessbankplc.shoeinventoryapp.databinding.FragmentShoeDetailBinding
 import com.accessbankplc.shoeinventoryapp.viewmodel.ShowListViewModel
 
 
+/**
+ * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ * */
 class ShoeDetailFragment : Fragment() {
 
     private val showListViewModel : ShowListViewModel by activityViewModels()

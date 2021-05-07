@@ -16,6 +16,9 @@ import com.accessbankplc.shoeinventoryapp.databinding.ItemShoelistBinding
 import com.accessbankplc.shoeinventoryapp.viewmodel.ShowListViewModel
 
 
+/**
+ * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ * */
 class ShoeListingFragment : Fragment() {
 
 
@@ -32,18 +35,20 @@ class ShoeListingFragment : Fragment() {
 
 
         observeShoeList(inflater, container)
-       // navigate()
+        navigate()
 
         return ui.root
     }
 
 
-    private fun observeShoeList (inflater: LayoutInflater, container: ViewGroup?) {
 
+    private fun navigate () {
         ui.fab.setOnClickListener {
             shoeListViewModel.initialShoeValue()
             findNavController().navigate(R.id.shoeDetailFragment)
         }
+    }
+    private fun observeShoeList (inflater: LayoutInflater, container: ViewGroup?) {
 
         shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer {shoeList ->
 
@@ -59,6 +64,8 @@ class ShoeListingFragment : Fragment() {
                 shoeListItem.shoeData = shoe
 
                 ui.fragmentShoeListingLinearLayout.addView(shoeListItem.root)
+
+
             }
 
         })

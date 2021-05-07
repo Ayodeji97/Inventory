@@ -14,6 +14,9 @@ import com.accessbankplc.shoeinventoryapp.utils.validateEmailAddress
 import com.accessbankplc.shoeinventoryapp.utils.validatePassword
 
 
+/**
+ * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ * */
 class LoginFragment : Fragment() {
 
     private lateinit var ui : FragmentLoginBinding

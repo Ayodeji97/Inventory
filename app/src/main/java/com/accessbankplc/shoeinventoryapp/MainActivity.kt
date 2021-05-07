@@ -10,6 +10,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.accessbankplc.shoeinventoryapp.databinding.ActivityMainBinding
 
+/**
+ * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ * */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding

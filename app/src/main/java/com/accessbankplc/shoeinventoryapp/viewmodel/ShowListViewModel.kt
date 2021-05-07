@@ -10,20 +10,15 @@ import com.accessbankplc.shoeinventoryapp.BR
 import com.accessbankplc.shoeinventoryapp.model.Shoe
 import java.text.DecimalFormat
 
+
+/**
+ * Created by Daniel Ayodeji : https://github.com/Ayodeji97
+ * */
+
 class ShowListViewModel : ViewModel() {
 
-    var shoe: Shoe? = null
-
+   var shoe: Shoe? = null
     private val shoes = mutableListOf<Shoe>()
-
-    private val shoeLiveData : LiveData<List<Shoe>> = shoeList
-
-    val shoeSize : LiveData<String> = Transformations.map(shoeLiveData) { shoe ->
-        String.format("%.1f", shoe.forEach {
-            it?.shoeSize
-        })
-    }
-
 
     private val _shoeList = MutableLiveData<List<Shoe>>()
     val shoeList: LiveData<List<Shoe>>
@@ -35,7 +30,6 @@ class ShowListViewModel : ViewModel() {
     get() = _isShoeAdditionComplete
 
     fun addShoe() {
-//        shoe?.shoeSize = observeShoeSize.shoeSize.toDouble()
         shoe?.let { shoe ->
             shoes.add(shoe)
             additionCompleted()
@@ -58,9 +52,4 @@ class ShowListViewModel : ViewModel() {
     fun shoeClear() {
         shoes.clear()
     }
-
-
-
-
-
 }
