@@ -129,7 +129,7 @@
                 android:id="@+id/fragment_add_shoe_size_et"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@{Double.toString(showListViewModel.shoe.shoeSize)}"
+                android:text="@={showListViewModel.shoeSize}"
                 android:inputType="text"
                 android:textColor="@color/black"
                 android:textSize="12sp" />

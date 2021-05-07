@@ -1,10 +1,8 @@
 package com.accessbankplc.shoeinventoryapp.ui
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
@@ -40,20 +38,10 @@ class ShoeListingFragment : Fragment() {
     }
 
 
-    private fun navigate () {
-
-//        ui.fab.setOnClickListener {
-//           shoeListViewModel.initialShoeValue()
-//            //shoeListViewModel.addShoe()
-//            findNavController().navigate(R.id.shoeDetailFragment)
-//        }
-    }
-
     private fun observeShoeList (inflater: LayoutInflater, container: ViewGroup?) {
 
         ui.fab.setOnClickListener {
             shoeListViewModel.initialShoeValue()
-            //shoeListViewModel.addShoe()
             findNavController().navigate(R.id.shoeDetailFragment)
         }
 
@@ -74,6 +62,30 @@ class ShoeListingFragment : Fragment() {
             }
 
         })
+
+        setHasOptionsMenu(true)
+    }
+
+    private fun logout () {
+        findNavController().navigate(R.id.loginFragment)
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId) {
+            R.id.log_out -> {
+                shoeListViewModel.shoeClear()
+                logout()
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
 }

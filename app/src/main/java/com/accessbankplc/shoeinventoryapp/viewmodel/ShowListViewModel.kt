@@ -4,15 +4,25 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import com.accessbankplc.shoeinventoryapp.BR
 import com.accessbankplc.shoeinventoryapp.model.Shoe
+import java.text.DecimalFormat
 
 class ShowListViewModel : ViewModel() {
 
-
-    //    private lateinit var shoe : Shoe
     var shoe: Shoe? = null
+
     private val shoes = mutableListOf<Shoe>()
+
+    private val shoeLiveData : LiveData<List<Shoe>> = shoeList
+
+    val shoeSize : LiveData<String> = Transformations.map(shoeLiveData) { shoe ->
+        String.format("%.1f", shoe.forEach {
+            it?.shoeSize
+        })
+    }
 
 
     private val _shoeList = MutableLiveData<List<Shoe>>()
@@ -25,6 +35,7 @@ class ShowListViewModel : ViewModel() {
     get() = _isShoeAdditionComplete
 
     fun addShoe() {
+//        shoe?.shoeSize = observeShoeSize.shoeSize.toDouble()
         shoe?.let { shoe ->
             shoes.add(shoe)
             additionCompleted()
@@ -33,9 +44,7 @@ class ShowListViewModel : ViewModel() {
     }
 
     fun initialShoeValue () {
-        //addShoe()
         shoe = Shoe("", "", 0.0, "")
-
     }
 
     fun additionCompleted () {
@@ -49,6 +58,9 @@ class ShowListViewModel : ViewModel() {
     fun shoeClear() {
         shoes.clear()
     }
+
+
+
 
 
 }
