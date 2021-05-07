@@ -34,7 +34,7 @@ class InstructionsOnBoardingFragment : Fragment() {
      * */
     private fun navigate () {
         ui.getInstructionBtn.setOnClickListener {
-            findNavController().navigate(R.id.loginFragment)
+            findNavController().navigate(R.id.shoeListingFragment)
         }
     }
 

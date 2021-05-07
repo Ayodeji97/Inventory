@@ -49,8 +49,10 @@ class LoginFragment : Fragment() {
                 ui.fragmentLoginPasswordEt.error = "Password Field Cannot be blank"
                 return@setOnClickListener
             }
-            findNavController().navigate(R.id.shoeListingFragment)
+            findNavController().navigate(R.id.welcomeOnBoardingFragment)
         }
     }
+
+
 
 }
