@@ -33,6 +33,9 @@ class InstructionsOnBoardingFragment : Fragment() {
      * Navigate to login screen
      * */
     private fun navigate () {
+        ui.fragmentWelcomeOnBoardingSkipTv.setOnClickListener {
+            findNavController().navigate(R.id.shoeListingFragment)
+        }
         ui.getInstructionBtn.setOnClickListener {
             findNavController().navigate(R.id.shoeListingFragment)
         }

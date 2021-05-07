@@ -40,6 +40,9 @@ private lateinit var ui : FragmentWelcomeOnBoardingBinding
      * */
 
     private fun navigate () {
+        ui.fragmentWelcomeOnBoardingSkipTv.setOnClickListener {
+            findNavController().navigate(R.id.instructionsOnBoardingFragment)
+        }
         ui.getStartedBtn.setOnClickListener {
             findNavController().navigate(R.id.instructionsOnBoardingFragment)
         }
