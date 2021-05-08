@@ -41,8 +41,10 @@ class ShoeListingFragment : Fragment() {
     private fun navigate() {
         ui.fab.setOnClickListener {
             shoeListViewModel.initialShoeValue()
-            findNavController().navigate(R.id.shoeDetailFragment)
+            findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment())
         }
+
+
     }
 
     /**
@@ -80,7 +82,7 @@ class ShoeListingFragment : Fragment() {
      * Log out function which called when the menu icon get clicked
      * */
     private fun logout() {
-        findNavController().navigate(R.id.loginFragment)
+        findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToLoginFragment())
     }
 
 

@@ -34,10 +34,10 @@ class InstructionsOnBoardingFragment : Fragment() {
      * */
     private fun navigate () {
         ui.fragmentWelcomeOnBoardingSkipTv.setOnClickListener {
-            findNavController().navigate(R.id.shoeListingFragment)
+            findNavController().navigate(InstructionsOnBoardingFragmentDirections.actionInstructionsOnBoardingFragmentToShoeListingFragment())
         }
         ui.getInstructionBtn.setOnClickListener {
-            findNavController().navigate(R.id.shoeListingFragment)
+            findNavController().navigate(InstructionsOnBoardingFragmentDirections.actionInstructionsOnBoardingFragmentToShoeListingFragment())
         }
     }
 
