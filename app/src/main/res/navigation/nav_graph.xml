@@ -19,7 +19,12 @@
         android:id="@+id/loginFragment"
         android:name="com.accessbankplc.shoeinventoryapp.ui.login.LoginFragment"
         android:label="Login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeOnBoardingFragment"
+            app:destination="@id/welcomeOnBoardingFragment"
+            />
+    </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
         android:name="com.accessbankplc.shoeinventoryapp.ui.shoelist.ShoeListingFragment"
