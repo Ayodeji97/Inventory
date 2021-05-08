@@ -9,7 +9,7 @@
             type="com.accessbankplc.shoeinventoryapp.model.Shoe" />
     </data>
 
-
+    <!-- Constraint layout app optimisation -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

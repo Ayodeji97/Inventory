@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
+    <!-- Constraint layout to prefer to avoid nested view for app optimisation -->
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
@@ -12,6 +12,7 @@
         tools:context=".ui.onboarding.InstructionsOnBoardingFragment">
 
 
+        <!--        Skip test view -->
         <TextView
             android:id="@+id/fragment_welcome_onBoarding_skip_tv"
             android:layout_width="wrap_content"
@@ -24,6 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--        Image view for image on screen -->
         <ImageView
             android:id="@+id/fragment_welcome_onBoarding_image_iv"
             android:layout_width="match_parent"
@@ -35,7 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragment_welcome_onBoarding_skip_tv" />
 
-
+        <!-- On boarding description heading text view -->
         <TextView
             android:id="@+id/fragment_welcome_onboarding_heading_tv"
             style="@style/onBoardingHeading"
@@ -73,7 +75,7 @@
             app:layout_constraintStart_toStartOf="@+id/fragment_welcome_onboarding_heading_tv"
             app:layout_constraintTop_toBottomOf="@+id/fragment_welcome_onboarding_heading_tv" />
 
-
+        <!--Button to navigate to next screen -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/get_instruction_btn"
             android:layout_width="0dp"
